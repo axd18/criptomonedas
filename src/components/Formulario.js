@@ -39,11 +39,11 @@ const Formulario = () => {
     const [moneda, SelectMonedas, actualizarState] = useMoneda('Elige tu moneda', '', MONEDAS);
     
     // Utilizar useCriptomoneda
-    const [criptomoneda, SelectCripto] = useCriptomoneda('Elige tu Criptomoneda', '');
+    const [criptomoneda, SelectCripto] = useCriptomoneda('Elige tu Criptomoneda', '', listacripto);
 
     // Ejecutar llamado a la API
     useEffect(() => {
-        const consultarAPI= async() => {
+        const consultarAPI = async() => {
             const url = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD';
             const resultado = await axios.get(url);
             guardarCriptomonedas(resultado.data.Data);
