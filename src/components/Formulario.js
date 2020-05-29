@@ -38,7 +38,7 @@ const Formulario = ({guardarMoneda, guardarCriptomoneda}) => {
     ]
     
     // Utilizar useMoneda
-    const [moneda, SelectMonedas, actualizarState] = useMoneda('Elige tu moneda', '', MONEDAS);
+    const [moneda, SelectMonedas] = useMoneda('Elige tu moneda', '', MONEDAS);
     
     // Utilizar useCriptomoneda
     const [criptomoneda, SelectCripto] = useCriptomoneda('Elige tu Criptomoneda', '', listacripto);
